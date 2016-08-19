@@ -17,9 +17,11 @@ $(document).ready(function() {
 
       if (checkXWin()) {
         $("#header-text").text("X wins!!");
+        $(".box").off("click");
       }
       else if (checkOWin()){
         $("#header-text").text("O wins!!");
+        $(".box").off("click");
       }
    }
   });
