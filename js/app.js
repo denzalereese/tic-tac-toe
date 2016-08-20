@@ -2,29 +2,37 @@
 $(document).ready(function() {
   // all code to manipulate the DOM
   // goes inside this function
-  var clicks = 1;
-  $(".box").on("click", function() {
-    console.log(this.id);
-     if ($("#" + this.id).is(":empty")) {
-      clicks ++;
-      if (clicks % 2 == 0) {
-        $("#" + this.id).addClass("clicked-X");
-        $("#" + this.id).append("<h1>X</h1>");
-      }else{
-        $("#" + this.id).addClass("clicked-O");
-        $("#" + this.id).append("<h1>O</h1>");
-      }
 
-      if (checkXWin()) {
-        $("#header-text").text("X wins!!");
-        $(".box").off("click");
-      }
-      else if (checkOWin()){
-        $("#header-text").text("O wins!!");
-        $(".box").off("click");
-      }
-   }
-  });
+  startGame();
+
+
+  function startGame() {
+    var clicks = 1;
+    $(".box").on("click", function() {
+      console.log(this.id);
+       if ($("#" + this.id).is(":empty")) {
+        clicks ++;
+        if (clicks % 2 == 0) {
+          $("#" + this.id).addClass("clicked-X");
+          $("#" + this.id).append("<h1>X</h1>");
+        }else{
+          $("#" + this.id).addClass("clicked-O");
+          $("#" + this.id).append("<h1>O</h1>");
+        }
+
+        if (checkXWin()) {
+          $("#header-text").text("X wins!!");
+          $(".box").off("click");
+        }
+        else if (checkOWin()){
+          $("#header-text").text("O wins!!");
+          $(".box").off("click");
+        }
+     }
+
+      $("button").on("click", resetBoard);
+    });
+  }
 
   function checkXWin() {
     //horizontal wins
@@ -139,6 +147,14 @@ $(document).ready(function() {
     }
 
       return false;
+    }
+
+    function resetBoard() {
+      $(".box").removeClass('clicked-X');
+      $(".box").removeClass('clicked-O');
+      $(".box h1").remove();
+      $("#header-text").text("Tic Tac Toe");
+      startGame();
     }
 
 
