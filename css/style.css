@@ -7,4 +7,23 @@
   height: 150px;
 }
 
+.win-dot {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    position: relative;
+    border-radius: 100%;
+    -webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: infinite;
+}
+
+
+@-webkit-keyframes example {
+    0%   {background-color:red; left:100px; top:100px;}
+    25%  {left:500px; top:400px;}
+    100% {left: 100px; top:100px;}
+}
+
+
 

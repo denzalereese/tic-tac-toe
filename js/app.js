@@ -7,6 +7,7 @@ $(document).ready(function() {
 
 
   function startGame() {
+
     var clicks = 1;
     $(".box").on("click", function() {
       console.log(this.id);
@@ -23,6 +24,7 @@ $(document).ready(function() {
         if (checkXWin()) {
           $("#header-text").text("X wins!!");
           $(".box").off("click");
+          $("#board").prepend("<div class='win-dot'></div>");
         }
         else if (checkOWin()){
           $("#header-text").text("O wins!!");
@@ -153,6 +155,7 @@ $(document).ready(function() {
       $(".box").removeClass('clicked-X');
       $(".box").removeClass('clicked-O');
       $(".box h1").remove();
+      $(".win-dot").remove();
       $("#header-text").text("Tic Tac Toe");
       startGame();
     }
