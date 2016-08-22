@@ -1,29 +1,180 @@
-#board {
-  margin-top: 10px;
+.top, .middle, .bottom {
+  margin: 0px;
+  padding: 0px;
+}
+
+#header-text {
+  color: white;
+  padding: 20px;
 }
 
 .box {
-  border: 1px solid black;
+  border: 1px solid white;
+  margin: 0;
+  padding: 0;
   height: 150px;
 }
 
-.win-dot {
+.X , .O {
+  color: white;
+}
+
+.XO-score {
+  font-size: 128px;
+  color: white;
+}
+
+#X-score, #O-score {
+  color: teal;
+}
+
+#win-dot-diagnol-left {
     width: 10px;
     height: 10px;
-    background-color: red;
+    background-color: pink;
     position: relative;
     border-radius: 100%;
-    -webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-name: diagnol-left; /* Chrome, Safari, Opera */
     -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
     -webkit-animation-iteration-count: infinite;
 }
 
 
-@-webkit-keyframes example {
-    0%   {background-color:red; left:100px; top:100px;}
-    25%  {left:500px; top:400px;}
+@-webkit-keyframes diagnol-left {
+    0%   {background-color: white; left:100px; top:100px;}
+    25%  {left:450px; top:400px;}
     100% {left: 100px; top:100px;}
 }
+
+#win-dot-top-across {
+    width: 10px;
+    height: 10px;
+    background-color: pink;
+    position: relative;
+    border-radius: 100%;
+    -webkit-animation-name: top-across; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: infinite;
+}
+
+
+@-webkit-keyframes top-across {
+    0%   {background-color: white; left:100px; top:75px;}
+    25%  {left:400px;}
+    100% {left: 100px; top:75px;}
+}
+
+
+#win-dot-mid-across {
+    width: 10px;
+    height: 10px;
+    background-color: pink;
+    position: relative;
+    border-radius: 100%;
+    -webkit-animation-name: mid-across; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: infinite;
+}
+
+
+@-webkit-keyframes mid-across {
+    0%   {background-color: white; left:100px; top:225px;}
+    25%  {left:400px;}
+    100% {left: 100px; top:225px;}
+}
+
+
+#win-dot-bottom-across {
+    width: 10px;
+    height: 10px;
+    background-color: pink;
+    position: relative;
+    border-radius: 100%;
+    -webkit-animation-name: bottom-across; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: infinite;
+}
+
+
+@-webkit-keyframes bottom-across {
+    0%   {background-color: white; left:100px; top:375px;}
+    25%  {left:400px;}
+    100% {left: 100px; top:375px;}
+}
+
+#win-dot-left-down {
+    width: 10px;
+    height: 10px;
+    background-color: pink;
+    position: relative;
+    border-radius: 100%;
+    -webkit-animation-name: left-down; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: infinite;
+}
+
+
+@-webkit-keyframes left-down {
+    0%   {background-color: white; left:75px; top:100px;}
+    25%  {left:75px; top: 375px; }
+    100% {left: 75px; top:100px;}
+}
+
+#win-dot-mid-down {
+    width: 10px;
+    height: 10px;
+    background-color: pink;
+    position: relative;
+    border-radius: 100%;
+    -webkit-animation-name: mid-down; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: infinite;
+}
+
+
+@-webkit-keyframes mid-down {
+    0%   {background-color: white; left:240px; top:100px;}
+    25%  {left:240px; top: 375px; }
+    100% {left: 240px; top:100px;}
+}
+
+#win-dot-right-down {
+    width: 10px;
+    height: 10px;
+    background-color: pink;
+    position: relative;
+    border-radius: 100%;
+    -webkit-animation-name: right-down; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: infinite;
+}
+
+
+@-webkit-keyframes right-down {
+    0%   {background-color: white; left:414px; top:100px;}
+    25%  {left:414px; top: 375px; }
+    100% {left: 414px; top:100px;}
+}
+
+#win-dot-diagnol-right {
+    width: 10px;
+    height: 10px;
+    background-color: pink;
+    position: relative;
+    border-radius: 100%;
+    -webkit-animation-name: diagnol-right; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    -webkit-animation-iteration-count: infinite;
+}
+
+
+@-webkit-keyframes diagnol-right {
+    0%   {background-color: white; left:414px; top:100px;}
+    25%  {left: 75px; top:375px;}
+    100% {left: 414px; top:100px;}
+}
+
+
 
 
 
