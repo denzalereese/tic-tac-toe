@@ -22,6 +22,7 @@ $(document).ready(function() {
         if (clicks % 2 != 0) {
           $("#" + this.id).addClass("clicked-X");
           $("#" + this.id).append("<h1 class='X animated rubberBand'>X</h1>");
+          xSound.load();
           xSound.play();
           if (clicks === 9) {
               $("#header-text").text("Cat's game! Reset.");
@@ -29,6 +30,7 @@ $(document).ready(function() {
         }else{
           $("#" + this.id).addClass("clicked-O");
           $("#" + this.id).append("<h1 class='O animated tada'>O</h1>");
+          oSound.load();
           oSound.play();
         }
       if (clicks != 0) {
@@ -37,6 +39,7 @@ $(document).ready(function() {
           $(".box").off("click");
           Xscore++;
           $("#X-score").text(Xscore + "");
+          winSound.load();
           winSound.play();
          }
         else if (checkOWin()){
@@ -44,6 +47,7 @@ $(document).ready(function() {
           $(".box").off("click");
           Oscore++;
           $("#O-score").text(Oscore + "");
+          winSound.load();
           winSound.play();
         }
         else {
